@@ -1,0 +1,15 @@
+[Unit]
+Description=Envia msm de texto a traves del servicio privada de masivianapi.
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/npm start
+WorkingDirectory=/home/jorge-salamanca/ServicesTyJ/Envio_Sms
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
